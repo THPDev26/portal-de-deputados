@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Deputados Federais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Carrega o CSS da mesma pasta -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header-banner">
+      <span class="header-badge">🏛️ DADOS ABERTOS</span>
+      <h1 class="header-title">Portal de Deputados Federais</h1>
+      <p class="subtext">Consulta em tempo real via API da Câmara dos Deputados</p>
+      <div class="notice">
+        <span>⚠️</span>
+        <span>Consulta referente à legislatura em exercício (Não declara eleitos para 2026).</span>
+      </div>
+    </header>
+
+    <section class="filter-card">
+      <input type="text" id="inputNome" class="search-input" placeholder="🔍 Buscar por nome do deputado...">
+      
+      <select id="selectUf" class="select-input">
+        <option value="">Todas as UFs</option>
+        <option value="BA">BA</option>
+        <option value="SP">SP</option>
+        <option value="RJ">RJ</option>
+        <option value="MG">MG</option>
+        <option value="RS">RS</option>
+        <option value="PR">PR</option>
+        <option value="PE">PE</option>
+        <option value="CE">CE</option>
+      </select>
+
+      <button id="btnBuscar" class="btn-primary">Filtrar</button>
+    </section>
+
+    <main id="gridDeputados" class="grid"></main>
+
+    <footer class="pagination-container">
+      <button id="btnAnterior" class="pagination-btn">← Anterior</button>
+      <span id="pageIndicator" class="page-indicator">Página 1</span>
+      <button id="btnProxima" class="pagination-btn">Próxima →</button>
+    </footer>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button id="btnFecharModal" class="modal-close-btn">✕</button>
+      <div id="modalConteudo"></div>
+    </div>
+  </div>
+
+  <!-- Carrega o JS da mesma pasta -->
+  <script src="script.js"></script>
+</body>
+</html>
