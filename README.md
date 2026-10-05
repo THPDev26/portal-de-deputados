@@ -1,10 +1,10 @@
 # Portal de Deputados Federais — Alternativa B
 
-Aplicação web desenvolvida para consulta, filtragem e detalhamento de dados dos Deputados Federais em exercício, consumindo a API de Dados Abertos da Câmara dos Deputados.
+Aplicação web desenvolvida em Java (Backend HTTP Server) e Front-end moderno para consulta, filtragem e detalhamento de dados dos Deputados Federais em exercício, consumindo a API de Dados Abertos da Câmara dos Deputados.
 
 ## 🛠️ Tecnologias Utilizadas e Justificativa
-- **HTML5 & CSS3:** Interface estruturada e responsiva, com estilização moderna baseada em variáveis CSS e flexbox.
-- **JavaScript (ES6+):** Utilizado para consumo assíncrono via `fetch`, manipulação do DOM e gestão do estado dos filtros e paginação.
+- **Java (Java SE 11+ / HTTP Server & HttpClient):** Utilizado para construir um servidor HTTP leve de arquivos estáticos e atuar como intermediário (Proxy HTTP) na consulta aos endpoints REST da Câmara dos Deputados.
+- **HTML5, CSS3 & JavaScript (ES6+):** Utilizados para criar uma interface de usuário responsiva, modular e interativa com buscas dinâmicas, filtros por partido/UF e visualização detalhada em modal.
 
 ## 🌐 Endereços e Fontes de Dados Consumidas
 - **Listagem de Deputados:** `https://dadosabertos.camara.leg.br/api/v2/deputados`
@@ -16,6 +16,7 @@ Aplicação web desenvolvida para consulta, filtragem e detalhamento de dados do
 - `nomeCivil`, `email`, `gabinete`: Exibidos na visualização detalhada do modal.
 - `tipoDespesa`, `dataDocumento`, `valorDocumento`: Utilizados para renderizar o histórico recente de gastos.
 
-## ⚠️ Limitações Conhecidas e Avisos
-- A consulta retorna apenas os deputados federais cadastrados na legislatura atual da API.
-- **Nota de Isenção:** Esta aplicação **não apresenta nem declara parlamentares como eleitos em 2026**, limitando-se a exibir a composição em exercício consultada em tempo real.
+## 🚀 Como Executar a Aplicação em Java
+1. Compile a aplicação Java:
+   ```bash
+   javac Main.java
